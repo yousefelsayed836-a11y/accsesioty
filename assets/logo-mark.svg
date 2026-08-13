@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Aurevia logo">
+  <defs>
+    <style>
+      .leaf { fill: #c98a94; }
+      .brandtext { fill:#c98a94; font-family: 'Fraunces', Georgia, serif; }
+      .subtext { fill:#a96570; font-family: 'Manrope', Arial, sans-serif; }
+    </style>
+  </defs>
+  <circle cx="150" cy="150" r="148" fill="none" stroke="#c98a94" stroke-width="3"/>
+  <g transform="rotate(32 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.0,-12.4 -7.2,-26.5 0,-35.392764277795 C7.2,-26.5 8.0,-12.4 0,0 Z"/></g>
+    <g transform="rotate(40.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.8,-12.6 -7.1,-26.9 0,-35.92613004357083 C7.1,-26.9 7.8,-12.6 0,0 Z"/></g>
+    <g transform="rotate(49.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.6,-12.6 -6.9,-27.0 0,-35.941608412449426 C6.9,-27.0 7.6,-12.6 0,0 Z"/></g>
+    <g transform="rotate(57.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.4,-12.4 -6.8,-26.6 0,-35.4378467222199 C6.8,-26.6 7.4,-12.4 0,0 Z"/></g>
+    <g transform="rotate(66.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.2,-12.1 -6.6,-25.8 0,-34.458868952864364 C6.6,-25.8 7.2,-12.1 0,0 Z"/></g>
+    <g transform="rotate(74.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.0,-11.6 -6.4,-24.8 0,-33.09022844946033 C6.4,-24.8 7.0,-11.6 0,0 Z"/></g>
+    <g transform="rotate(83.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.8,-11.0 -6.2,-23.6 0,-31.451531373598005 C6.2,-23.6 6.8,-11.0 0,0 Z"/></g>
+    <g transform="rotate(91.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.6,-10.4 -6.0,-22.3 0,-29.685984262542338 C6.0,-22.3 6.6,-10.4 0,0 Z"/></g>
+    <g transform="rotate(100.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.4,-9.8 -5.9,-21.0 0,-27.947879140045988 C5.9,-21.0 6.4,-9.8 0,0 Z"/></g>
+    <g transform="rotate(108.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.3,-9.2 -5.7,-19.8 0,-26.38910986108771 C5.7,-19.8 6.3,-9.2 0,0 Z"/></g>
+    <g transform="rotate(117.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.2,-8.8 -5.6,-18.9 0,-25.145898033750317 C5.6,-18.9 6.2,-8.8 0,0 Z"/></g>
+    <g transform="rotate(125.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.1,-8.5 -5.5,-18.2 0,-24.3268885464041 C5.5,-18.2 6.1,-8.5 0,0 Z"/></g>
+    <g transform="rotate(134.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.1,-8.4 -5.5,-18.0 0,-24.003655037885427 C5.5,-18.0 6.1,-8.4 0,0 Z"/></g>
+    <g transform="rotate(142.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.1,-8.5 -5.5,-18.2 0,-24.20444504226559 C5.5,-18.2 6.1,-8.5 0,0 Z"/></g>
+    <g transform="rotate(151.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.1,-8.7 -5.5,-18.7 0,-24.911711423061444 C5.5,-18.7 6.1,-8.7 0,0 Z"/></g>
+    <g transform="rotate(159.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.2,-9.1 -5.6,-19.5 0,-26.063645826056955 C5.6,-19.5 6.2,-9.1 0,0 Z"/></g>
+    <g transform="rotate(168.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.3,-9.6 -5.7,-20.7 0,-27.559580141545197 C5.7,-20.7 6.3,-9.6 0,0 Z"/></g>
+    <g transform="rotate(176.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.4,-10.2 -5.8,-22.0 0,-29.268783939569115 C5.8,-22.0 6.4,-10.2 0,0 Z"/></g>
+    <g transform="rotate(185.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.6,-10.9 -6.0,-23.3 0,-31.04188906600158 C6.0,-23.3 6.6,-10.9 0,0 Z"/></g>
+    <g transform="rotate(193.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-6.8,-11.5 -6.2,-24.5 0,-32.72394299843728 C6.2,-24.5 6.8,-11.5 0,0 Z"/></g>
+    <g transform="rotate(202.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.0,-12.0 -6.4,-25.6 0,-34.16795022275399 C6.4,-25.6 7.0,-12.0 0,0 Z"/></g>
+    <g transform="rotate(210.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.2,-12.3 -6.6,-26.4 0,-35.24771824283638 C6.6,-26.4 7.2,-12.3 0,0 Z"/></g>
+    <g transform="rotate(219.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.4,-12.6 -6.8,-26.9 0,-35.868885604402834 C6.8,-26.9 7.4,-12.6 0,0 Z"/></g>
+    <g transform="rotate(227.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.6,-12.6 -6.9,-27.0 0,-35.97716818855047 C6.9,-27.0 7.6,-12.6 0,0 Z"/></g>
+    <g transform="rotate(236.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.8,-12.4 -7.1,-26.7 0,-35.56310312740072 C7.1,-26.7 7.8,-12.4 0,0 Z"/></g>
+    <g transform="rotate(244.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.0,-12.1 -7.2,-26.0 0,-34.66287576874183 C7.2,-26.0 8.0,-12.1 0,0 Z"/></g>
+    <g transform="rotate(253.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.1,-11.7 -7.4,-25.0 0,-33.35515742082448 C7.4,-25.0 8.1,-11.7 0,0 Z"/></g>
+    <g transform="rotate(261.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.2,-11.1 -7.4,-23.8 0,-31.754230228336418 C7.4,-23.8 8.2,-11.1 0,0 Z"/></g>
+    <g transform="rotate(270.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.2,-10.5 -7.5,-22.5 0,-30.000000000000004 C7.5,-22.5 8.2,-10.5 0,0 Z"/></g>
+    <g transform="rotate(278.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.2,-9.9 -7.5,-21.2 0,-28.245769771663575 C7.5,-21.2 8.2,-9.9 0,0 Z"/></g>
+    <g transform="rotate(287.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.2,-9.3 -7.5,-20.0 0,-26.64484257917552 C7.5,-20.0 8.2,-9.3 0,0 Z"/></g>
+    <g transform="rotate(295.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.2,-8.9 -7.4,-19.0 0,-25.337124231258176 C7.4,-19.0 8.2,-8.9 0,0 Z"/></g>
+    <g transform="rotate(304.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-8.0,-8.6 -7.3,-18.3 0,-24.436896872599274 C7.3,-18.3 8.0,-8.6 0,0 Z"/></g>
+    <g transform="rotate(312.5 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.9,-8.4 -7.2,-18.0 0,-24.022831811449528 C7.2,-18.0 7.9,-8.4 0,0 Z"/></g>
+    <g transform="rotate(321.0 150 150) translate(150 60)"><path class="leaf" d="M0,0 C-7.7,-8.4 -7.0,-18.1 0,-24.131114395597166 C7.0,-18.1 7.7,-8.4 0,0 Z"/></g>
+  <path class="leaf" d="M124,58 C106,54 92,40 96,20 C100,26 98,38 108,44 C104,32 108,22 118,18 C114,30 118,42 130,46 C122,48 118,52 124,58 Z"/>
+  <path class="leaf" d="M176,58 C194,54 208,40 204,20 C200,26 202,38 192,44 C196,32 192,22 182,18 C186,30 182,42 170,46 C178,48 182,52 176,58 Z"/>
+  <text x="150" y="168" text-anchor="middle" class="brandtext" font-size="64" font-weight="700">A</text>
+  <text x="150" y="204" text-anchor="middle" class="brandtext" font-size="19" font-weight="600" letter-spacing="6">AUREVIA</text>
+  <text x="150" y="222" text-anchor="middle" class="subtext" font-size="7" letter-spacing="1.6">ACCESSORIES &amp; JEWELRY</text>
+</svg>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — AUREVIA</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="header-left"></div>
+    <div class="header-center">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="AUREVIA">
+        <span class="logo-wordmark">AUREVIA</span>
+      </a>
+    </div>
+    <div class="header-right"></div>
+  </div>
+</header>
+
+<div id="confirmRoot">
+  <section class="section">
+    <div class="container confirm-box">
+      <div class="confirm-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <span class="eyebrow">Thank You</span>
+      <h1>Your order has been placed!</h1>
+      <p style="color:var(--ink-soft)">Thanks <span id="confirmName"></span> — we've received your order and will reach out shortly to confirm delivery details.</p>
+      <div class="order-id">Order <span id="confirmOrderId"></span></div>
+      <p style="color:var(--ink-soft);font-size:14px">Order total: <strong id="confirmTotal"></strong></p>
+      <div style="margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>© <span data-year></span> AUREVIA. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

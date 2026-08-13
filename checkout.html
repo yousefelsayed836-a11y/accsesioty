@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — AUREVIA</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="header-left">
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+    </div>
+    <div class="header-center">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.svg" alt="AUREVIA">
+        <span class="logo-wordmark">AUREVIA</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="page-banner">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="cart.html">Bag</a> / Checkout</div>
+  <h1>Checkout</h1>
+</div>
+
+<section class="section-tight">
+  <div class="container checkout-grid">
+    <div>
+      <h3 style="margin-bottom:20px">Shipping Details</h3>
+      <form id="checkoutForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="coName">Full Name</label>
+            <input type="text" id="coName" required placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="coPhone">Phone Number</label>
+            <input type="tel" id="coPhone" required placeholder="+1 555 123 4567">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="coEmail">Email Address</label>
+          <input type="email" id="coEmail" required placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label for="coAddress">Street Address</label>
+          <input type="text" id="coAddress" required placeholder="123 Main Street, Apt 4">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="coCity">City</label>
+            <input type="text" id="coCity" required placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="coZip">ZIP / Postal Code</label>
+            <input type="text" id="coZip" required placeholder="00000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="coNotes">Order Notes (optional)</label>
+          <textarea id="coNotes" placeholder="Delivery instructions, gift note, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+        <p class="cart-note">This is a simple order form — no online payment is collected. We'll contact you to confirm payment and delivery.</p>
+      </form>
+    </div>
+
+    <div class="summary-card">
+      <h3>Order Summary</h3>
+      <div id="checkoutSummary"></div>
+      <div class="summary-row" style="margin-top:16px"><span>Subtotal</span><span id="coSubtotal">$0.00</span></div>
+      <div class="summary-row"><span>Shipping</span><span id="coShipping">Free</span></div>
+      <div class="summary-row total"><span>Total</span><span id="coTotal">$0.00</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>© <span data-year></span> AUREVIA. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -132,7 +132,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 body:not(.has-hero) .site-header { background: rgba(255, 255, 255, 0.96); }
 body.has-hero .site-header:not(.is-solid) .logo-wordmark {
-  text-shadow: 0 1px 4px rgba(255,255,255,.85), 0 1px 14px rgba(255,255,255,.7), 0 0 2px rgba(255,255,255,.9);
+  animation: logoGlow 2.6s ease-in-out infinite;
+}
+@keyframes logoGlow {
+  0%, 100% {
+    text-shadow: 0 1px 4px rgba(255,255,255,.85), 0 1px 14px rgba(255,255,255,.7), 0 0 2px rgba(255,255,255,.9);
+  }
+  50% {
+    text-shadow: 0 1px 6px rgba(255,255,255,1), 0 0 22px rgba(255,255,255,1), 0 0 38px rgba(247,223,196,.95), 0 0 3px rgba(255,255,255,1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.has-hero .site-header:not(.is-solid) .logo-wordmark { animation: none; }
 }
 body.has-hero .site-header:not(.is-solid) .icon-btn svg {
   filter: drop-shadow(0 1px 3px rgba(255,255,255,.85)) drop-shadow(0 0 6px rgba(255,255,255,.6));

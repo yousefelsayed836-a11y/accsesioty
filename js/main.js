@@ -169,8 +169,6 @@ function initProductPage() {
   const p = getProduct(id) || PRODUCTS[0];
 
   document.title = p.name + " — AUREVIA";
-  document.getElementById("pdBreadcrumbCat").textContent = categoryLabel(p.category);
-  document.getElementById("pdBreadcrumbCat").href = "shop.html?cat=" + p.category;
   document.getElementById("pdMedia").innerHTML = mediaHTML(p);
   document.getElementById("pdMedia").classList.toggle("has-photo", !!p.img);
   document.getElementById("pdCat").textContent = categoryLabel(p.category);

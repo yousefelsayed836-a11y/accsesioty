@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; }
   transition: opacity .5s ease, visibility .5s;
 }
 .page-loader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-.page-loader-inner { position: relative; width: 108px; height: 108px; display: flex; align-items: center; justify-content: center; }
+.page-loader-inner { position: relative; width: 108px; height: 108px; display: flex; align-items: center; justify-content: center; perspective: 400px; }
 .page-loader-ring {
   position: absolute;
   inset: 0;
@@ -47,17 +47,17 @@ html { scroll-behavior: smooth; }
   border-top-color: var(--rose-dark);
   animation: loaderSpin 1s linear infinite;
 }
-.page-loader-logo {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 21px;
-  color: var(--ink);
-  animation: loaderPulse 1.6s ease-in-out infinite;
+.page-loader .logo-wordmark {
+  font-size: 22px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: loaderSpin3D .9s linear infinite;
 }
 @keyframes loaderSpin { to { transform: rotate(360deg); } }
-@keyframes loaderPulse { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+@keyframes loaderSpin3D { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
 @media (prefers-reduced-motion: reduce) {
   .page-loader-ring { animation: none; }
-  .page-loader-logo { animation: none; opacity: 1; }
+  .page-loader .logo-wordmark { animation: none; }
 }
 body {
   margin: 0;

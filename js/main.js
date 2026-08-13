@@ -22,6 +22,35 @@ function initHeroReveal() {
   });
 }
 
+/* ---------------- testimonial slider ---------------- */
+function initTestiSlider() {
+  const track = document.getElementById("testiTrack");
+  const nextBtn = document.getElementById("testiNext");
+  if (!track || !nextBtn) return;
+  const cards = Array.from(track.querySelectorAll(".testi-card"));
+  if (cards.length < 2) return;
+  let index = cards.findIndex((c) => c.classList.contains("active"));
+  if (index < 0) index = 0;
+  let timer;
+
+  const goTo = (i) => {
+    cards[index].classList.remove("active");
+    index = (i + cards.length) % cards.length;
+    cards[index].classList.add("active");
+  };
+  const next = () => goTo(index + 1);
+  const restart = () => {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  };
+
+  nextBtn.addEventListener("click", () => {
+    next();
+    restart();
+  });
+  restart();
+}
+
 /* ---------------- scroll reveal ---------------- */
 function initScrollReveal() {
   const els = document.querySelectorAll(".reveal");
@@ -359,4 +388,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCheckoutPage();
   initConfirmationPage();
   initScrollReveal();
+  initTestiSlider();
 });

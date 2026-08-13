@@ -233,21 +233,24 @@ ul { margin: 0; padding: 0; list-style: none; }
    ========================================================================== */
 .hero {
   background: #ffffff;
-  padding: 36px 0 56px;
 }
 .hero-media {
-  max-width: 640px;
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
+  position: relative;
+  width: 100%;
   overflow: hidden;
   background: #fff;
-  box-shadow: var(--shadow-md);
 }
-.hero-media img { width: 100%; height: auto; display: block; }
+.hero-media img { width: 100%; height: auto; max-height: 72vh; object-fit: cover; display: block; }
+.hero-cta {
+  position: absolute;
+  left: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @media (max-width: 900px) {
-  .hero { padding: 20px 0 40px; }
-  .hero-media { max-width: 100%; }
+  .hero-media img { max-height: none; height: auto; object-fit: initial; }
+  .hero-cta { left: 6%; }
 }
 
 /* ==========================================================================

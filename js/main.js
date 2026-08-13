@@ -65,11 +65,16 @@ function productCardHTML(p) {
         <button class="btn btn-light btn-sm btn-block" onclick="handleQuickAdd(event,'${p.id}')">Quick Add</button>
       </div>
     </div>
-    <div class="product-cat">${categoryLabel(p.category)}</div>
-    <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
-    <div class="price-row">
-      <span>${formatPrice(p.price)}</span>
-      ${p.oldPrice ? `<span class="price-old">${formatPrice(p.oldPrice)}</span>` : ""}
+    <div class="product-body">
+      <div class="product-cat-row">
+        <span class="product-cat">${categoryLabel(p.category)}</span>
+        ${p.rating ? `<span class="product-rating">★ ${p.rating}</span>` : ""}
+      </div>
+      <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+      <div class="price-row">
+        <span>${formatPrice(p.price)}</span>
+        ${p.oldPrice ? `<span class="price-old">${formatPrice(p.oldPrice)}</span>` : ""}
+      </div>
     </div>
   </div>`;
 }

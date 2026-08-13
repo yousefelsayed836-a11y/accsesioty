@@ -1,5 +1,14 @@
 /* AUREVIA — shared site behavior: header, drawer, product rendering, page logic */
 
+/* ---------------- page loader ---------------- */
+(function () {
+  const loader = document.getElementById("pageLoader");
+  if (!loader) return;
+  const hide = () => loader.classList.add("is-hidden");
+  window.addEventListener("load", hide);
+  setTimeout(hide, 6000);
+})();
+
 /* ---------------- hero spotlight reveal ---------------- */
 function initHeroReveal() {
   const media = document.querySelector(".hero-media");
@@ -147,8 +156,8 @@ function productCardHTML(p) {
       <h3 class="product-title"><a href="product.html?id=${p.id}">${p.name}</a></h3>
       <div class="price-row">
         <span>${formatPrice(p.price)}</span>
-        ${p.oldPrice ? `<span class="price-old">${formatPrice(p.oldPrice)}</span>` : ""}
       </div>
+      ${p.oldPrice ? `<div class="price-old-row"><span class="price-old">${formatPrice(p.oldPrice)}</span></div>` : ""}
     </div>
   </div>`;
 }

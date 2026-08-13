@@ -14,9 +14,11 @@ function initHeroReveal() {
   media.addEventListener("mousemove", (e) => {
     setPos(e.clientX, e.clientY);
     media.style.setProperty("--mr", "220px");
+    media.style.setProperty("--mo", "1");
   });
   media.addEventListener("mouseleave", () => {
     media.style.setProperty("--mr", "0px");
+    media.style.setProperty("--mo", "0");
   });
 }
 

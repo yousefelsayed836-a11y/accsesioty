@@ -92,15 +92,15 @@ ul { margin: 0; padding: 0; list-style: none; }
    Announcement bar
    ========================================================================== */
 .announce-bar {
-  background: #ffffff;
-  color: var(--ink);
+  background: var(--rose-dark);
+  color: #ffffff;
   text-align: center;
   font-size: 12.5px;
   letter-spacing: 0.6px;
   padding: 9px 16px;
   overflow: hidden;
   white-space: nowrap;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--rose-dark);
 }
 .announce-track {
   display: inline-flex;
@@ -295,7 +295,7 @@ body.has-hero .logo-wordmark { transition: opacity .35s ease; }
 }
 
 @media (max-width: 900px) {
-  .hero-media img { max-height: 48vh; }
+  .hero-media img { height: 70vh; max-height: none; }
   .hero-cta { left: 50%; bottom: 8%; }
   body.has-hero .site-header:not(.is-solid) .logo-wordmark { opacity: 0; }
   body.has-hero .site-header.is-solid .logo-wordmark { opacity: 1; }

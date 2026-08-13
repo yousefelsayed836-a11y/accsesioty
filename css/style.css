@@ -278,7 +278,7 @@ body.has-hero .logo-wordmark { transition: opacity .35s ease; }
   --mo: 0;
   transition: --mr .8s cubic-bezier(.22,.61,.36,1), --mo .8s cubic-bezier(.22,.61,.36,1);
 }
-.hero-media img { width: 100%; height: auto; max-height: 64vh; object-fit: cover; object-position: center 82%; display: block; }
+.hero-media img { width: 100%; height: auto; max-height: 74vh; object-fit: cover; object-position: center 82%; display: block; }
 .hero-media img:not(.hero-img-hover) { position: relative; z-index: 0; }
 .hero-media .hero-img-hover {
   position: absolute;

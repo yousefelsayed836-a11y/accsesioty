@@ -134,51 +134,13 @@ function initShopPage() {
   if (!grid) return;
 
   const params = new URLSearchParams(window.location.search);
-  let activeCat = params.get("cat") || "all";
-  let query = (params.get("q") || "").toLowerCase();
-  let sort = "featured";
+  const activeCat = params.get("cat") || "all";
+  const query = (params.get("q") || "").toLowerCase();
 
-  const chipsWrap = document.getElementById("filterChips");
-  const allCats = [{ slug: "all", label: "All" }, ...CATEGORIES];
-  chipsWrap.innerHTML = allCats
-    .map((c) => `<button class="chip ${c.slug === activeCat ? "active" : ""}" data-cat="${c.slug}">${c.label}</button>`)
-    .join("");
-
-  function apply() {
-    let list = PRODUCTS.slice();
-    if (activeCat !== "all") list = list.filter((p) => p.category === activeCat);
-    if (query) list = list.filter((p) => p.name.toLowerCase().includes(query) || p.category.includes(query));
-    if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
-    if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
-    if (sort === "rating") list.sort((a, b) => b.rating - a.rating);
-    renderGrid("shopGrid", list);
-    document.getElementById("resultCount").textContent = `${list.length} product${list.length !== 1 ? "s" : ""}`;
-  }
-
-  chipsWrap.addEventListener("click", (e) => {
-    const btn = e.target.closest(".chip");
-    if (!btn) return;
-    activeCat = btn.dataset.cat;
-    chipsWrap.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
-    btn.classList.add("active");
-    apply();
-  });
-
-  document.getElementById("sortSelect")?.addEventListener("change", (e) => {
-    sort = e.target.value;
-    apply();
-  });
-
-  const searchInput = document.getElementById("shopSearchInput");
-  if (searchInput) {
-    searchInput.value = params.get("q") || "";
-    searchInput.addEventListener("input", (e) => {
-      query = e.target.value.toLowerCase();
-      apply();
-    });
-  }
-
-  apply();
+  let list = PRODUCTS.slice();
+  if (activeCat !== "all") list = list.filter((p) => p.category === activeCat);
+  if (query) list = list.filter((p) => p.name.toLowerCase().includes(query) || p.category.includes(query));
+  renderGrid("shopGrid", list);
 }
 
 /* ---------------- product detail page ---------------- */

@@ -120,7 +120,7 @@ function renderCartDrawer() {
       const meta = [l.color, l.size ? "Size " + l.size : null].filter(Boolean).join(" · ");
       return `
       <div class="cart-line">
-        <div class="cart-line-media">${categoryIcon(l.product.category)}</div>
+        <div class="cart-line-media ${mediaClass(l.product)}">${mediaHTML(l.product)}</div>
         <div class="cart-line-info">
           <div class="cart-line-title">${l.product.name}</div>
           ${meta ? `<div class="cart-line-meta">${meta}</div>` : ""}

@@ -27,22 +27,45 @@ const COLOR_HEX = {
 };
 
 const PRODUCTS = [
-  { id: "p01", name: "Aurora Pendant Necklace", category: "necklaces", price: 38, oldPrice: 48, badge: "Sale", colors: ["Gold", "Silver"], rating: 4.8,
-    desc: "A delicate chain necklace finished with a hand-set teardrop pendant. Lightweight enough for everyday wear, refined enough for evenings out." },
-  { id: "p02", name: "Layla Layered Necklace", category: "necklaces", price: 44, colors: ["Gold", "Rose Gold"], badge: "New", rating: 4.6,
-    desc: "Two fine chains layered at different lengths for an effortless, styled-in-seconds look." },
+  { id: "p01", name: "Aurora Pendant Necklace", category: "necklaces", price: 38, oldPrice: 48, badge: "Sale", colors: ["Silver"], rating: 4.8,
+    img: "assets/products/necklace-pendant-halo.jpg",
+    desc: "A fine chain necklace finished with a hand-set halo pendant. Lightweight enough for everyday wear, refined enough for evenings out." },
+  { id: "p02", name: "Layla Pavé Chain Necklace", category: "necklaces", price: 64, colors: ["Silver"], badge: "New", rating: 4.6,
+    img: "assets/products/necklace-pave-chain.jpg",
+    desc: "A mariner-link chain fully pavé-set for continuous sparkle from every angle — a statement piece that still layers well." },
+  { id: "p17", name: "Marlowe Statement Chain", category: "necklaces", price: 72, colors: ["Silver"], badge: "New", rating: 4.7,
+    img: "assets/products/necklace-statement-chain.jpg",
+    desc: "A bold pavé curb-link chain with serious presence — the piece that finishes an outfit on its own." },
   { id: "p03", name: "Celeste Pearl Drop Earrings", category: "earrings", price: 26, colors: ["Pearl", "Gold"], rating: 4.9,
     desc: "Freshwater-style pearl drops on a delicate gold-tone hook. Light on the ear, elegant on you." },
   { id: "p04", name: "Nova Hoop Earrings", category: "earrings", price: 22, oldPrice: 30, badge: "Sale", colors: ["Gold", "Silver", "Black"], rating: 4.7,
     desc: "Classic huggie hoops with a soft polished finish — the everyday earring you'll reach for on repeat." },
   { id: "p05", name: "Mira Statement Studs", category: "earrings", price: 19, colors: ["Gold", "Silver"], rating: 4.5,
     desc: "Sculptural studs that add a little edge to a plain outfit without trying too hard." },
-  { id: "p06", name: "Sienna Signet Ring", category: "rings", price: 24, colors: ["Gold", "Silver"], sizes: ["6", "7", "8", "9"], badge: "Bestseller", rating: 4.9,
-    desc: "A modern take on the signet ring — smooth, minimal, and easy to stack with your other favorites." },
-  { id: "p07", name: "Wren Stacking Ring Set", category: "rings", price: 29, colors: ["Gold", "Rose Gold"], sizes: ["6", "7", "8", "9"], rating: 4.6,
-    desc: "Three slim bands designed to be worn together or separately, for a customizable stacked look." },
-  { id: "p08", name: "Ivy Chain Bracelet", category: "bracelets", price: 27, oldPrice: 34, badge: "Sale", colors: ["Gold", "Silver"], rating: 4.7,
-    desc: "A substantial chain-link bracelet with a secure lobster clasp and 2in extender." },
+  { id: "p06", name: "Sienna Link Ring", category: "rings", price: 34, colors: ["Gold"], sizes: ["6", "7", "8", "9"], badge: "Bestseller", rating: 4.9,
+    img: "assets/products/ring-link-band.jpg",
+    desc: "A sculptural chain-link band in polished gold-tone — easy to wear alone or stacked with our other rings." },
+  { id: "p07", name: "Wren Bridal Ring Duo", category: "rings", price: 59, colors: ["Gold"], sizes: ["6", "7", "8", "9"], rating: 4.6,
+    img: "assets/products/ring-bridal-set-a.jpg",
+    desc: "A slim band and a solitaire-style ring designed to be worn together as a set, or separately." },
+  { id: "p18", name: "Noor Pavé Bridal Set", category: "rings", price: 68, colors: ["Gold"], sizes: ["6", "7", "8", "9"], badge: "New", rating: 4.8,
+    img: "assets/products/ring-bridal-set-b.jpg",
+    desc: "Two fully pavé-set bands paired together, anchored by a brilliant round centre stone." },
+  { id: "p19", name: "Celine Sapphire Wrap Ring", category: "rings", price: 54, colors: ["Gold"], sizes: ["6", "7", "8", "9"], rating: 4.7,
+    img: "assets/products/ring-sapphire-wrap.jpg",
+    desc: "An open wrap design lined with pavé stones and finished with two heart-cut sapphire-blue accents." },
+  { id: "p20", name: "Halo Cushion Ring", category: "rings", price: 46, colors: ["Silver"], sizes: ["6", "7", "8", "9"], rating: 4.8,
+    img: "assets/products/ring-cushion-halo.jpg",
+    desc: "A cushion-cut centre stone framed by a bright pavé halo, set on a delicate polished band." },
+  { id: "p21", name: "Vera Pavé Statement Ring", category: "rings", price: 62, colors: ["Gold"], sizes: ["6", "7", "8", "9"], badge: "Bestseller", rating: 4.9,
+    img: "assets/products/ring-pave-statement.jpg",
+    desc: "A wide, multi-row pavé band with a raised centre stone — our most eye-catching ring, built to be the only one you need." },
+  { id: "p22", name: "Marielle Pear Cluster Ring", category: "rings", price: 45, colors: ["Gold"], sizes: ["6", "7", "8", "9"], rating: 4.6,
+    img: "assets/products/ring-pear-cluster.jpg",
+    desc: "A pear-shaped cluster of pavé stones set on a beaded triple-row band for extra texture." },
+  { id: "p08", name: "Ivy Pavé Curb Bracelet", category: "bracelets", price: 57, oldPrice: 70, badge: "Sale", colors: ["Rose Gold"], rating: 4.7,
+    img: "assets/products/bracelet-pave-curb.jpg",
+    desc: "A substantial curb-link bracelet fully pavé-set for continuous shine, finished with a secure clasp." },
   { id: "p09", name: "Sol Bead Bracelet", category: "bracelets", price: 18, colors: ["Gold", "Black", "Pearl"], rating: 4.4,
     desc: "Stretch bead bracelet that layers beautifully with our chain styles — comfortable, no clasp needed." },
   { id: "p10", name: "Marlow Mini Crossbody", category: "bags", price: 58, colors: ["Black", "Rose Gold"], badge: "New", rating: 4.8,
@@ -77,4 +100,12 @@ function categoryLabel(slug) {
 function categoryIcon(slug) {
   const c = CATEGORIES.find((c) => c.slug === slug);
   return c ? c.icon : ICONS.necklace;
+}
+
+function mediaHTML(p) {
+  return p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : categoryIcon(p.category);
+}
+
+function mediaClass(p) {
+  return p.img ? "has-photo" : "";
 }

@@ -59,12 +59,12 @@ function productCardHTML(p) {
     .join("");
   return `
   <div class="product-card" data-id="${p.id}">
-    <div class="product-media">
+    <div class="product-media ${mediaClass(p)}">
       ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
       <button class="product-wish ${wished ? "active" : ""}" aria-label="Wishlist" onclick="handleWishClick(event,'${p.id}')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="${wished ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.6 4 8 3.7 10 5 12 7.5 14 5 16 3.7 18.4 4 22 4.5 23.6 8 22 11.7 19.5 16.4 12 21 12 21Z"/></svg>
       </button>
-      <a href="product.html?id=${p.id}">${categoryIcon(p.category)}</a>
+      <a href="product.html?id=${p.id}">${mediaHTML(p)}</a>
       <div class="product-quickadd">
         <button class="btn btn-light btn-sm btn-block" onclick="handleQuickAdd(event,'${p.id}')">Quick Add</button>
       </div>
@@ -185,7 +185,8 @@ function initProductPage() {
   document.title = p.name + " — AUREVIA";
   document.getElementById("pdBreadcrumbCat").textContent = categoryLabel(p.category);
   document.getElementById("pdBreadcrumbCat").href = "shop.html?cat=" + p.category;
-  document.getElementById("pdMedia").innerHTML = categoryIcon(p.category);
+  document.getElementById("pdMedia").innerHTML = mediaHTML(p);
+  document.getElementById("pdMedia").classList.toggle("has-photo", !!p.img);
   document.getElementById("pdCat").textContent = categoryLabel(p.category);
   document.getElementById("pdTitle").textContent = p.name;
   document.getElementById("pdDesc").textContent = p.desc;
@@ -290,7 +291,7 @@ function initCartPage() {
         return `
         <div class="cart-row">
           <div class="cart-row-product">
-            <div class="cart-row-media">${categoryIcon(l.product.category)}</div>
+            <div class="cart-row-media ${mediaClass(l.product)}">${mediaHTML(l.product)}</div>
             <div>
               <div class="cart-line-title">${l.product.name}</div>
               ${meta ? `<div class="cart-line-meta">${meta}</div>` : ""}

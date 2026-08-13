@@ -53,10 +53,6 @@ function initNewsletter() {
 /* ---------------- product card rendering ---------------- */
 function productCardHTML(p) {
   const wished = getWishlist().includes(p.id);
-  const swatches = (p.colors || [])
-    .slice(0, 4)
-    .map((c) => `<span class="mini-swatch" style="background:${COLOR_HEX[c] || "#ddd"}" title="${c}"></span>`)
-    .join("");
   return `
   <div class="product-card" data-id="${p.id}">
     <div class="product-media ${mediaClass(p)}">
@@ -75,7 +71,6 @@ function productCardHTML(p) {
       <span>${formatPrice(p.price)}</span>
       ${p.oldPrice ? `<span class="price-old">${formatPrice(p.oldPrice)}</span>` : ""}
     </div>
-    ${swatches ? `<div class="swatch-row">${swatches}</div>` : ""}
   </div>`;
 }
 
@@ -92,7 +87,7 @@ function handleQuickAdd(e, id) {
   e.preventDefault();
   e.stopPropagation();
   const p = getProduct(id);
-  addToCart(id, 1, p.colors?.[0] || null, p.sizes?.[0] || null);
+  addToCart(id, 1, null, p.sizes?.[0] || null);
 }
 
 function renderGrid(containerId, products) {
@@ -101,23 +96,9 @@ function renderGrid(containerId, products) {
   el.innerHTML = products.map(productCardHTML).join("") || `<div class="empty-state">No products found.</div>`;
 }
 
-/* ---------------- category grid ---------------- */
-function renderCategoryGrid(containerId) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-  el.innerHTML = CATEGORIES.map(
-    (c) => `
-    <a class="category-card" href="shop.html?cat=${c.slug}">
-      <span class="cat-icon">${c.icon}</span>
-      <span class="cat-label">${c.label}</span>
-    </a>`
-  ).join("");
-}
-
 /* ---------------- home page ---------------- */
 function initHomePage() {
   if (!document.getElementById("featuredGrid")) return;
-  renderCategoryGrid("categoryGrid");
   renderGrid("featuredGrid", PRODUCTS.slice(0, 8));
   renderGrid("bestsellerGrid", PRODUCTS.filter((p) => p.badge === "Bestseller" || p.rating >= 4.8).slice(0, 4));
 }
@@ -197,22 +178,7 @@ function initProductPage() {
     old.style.display = "inline";
   }
 
-  let selectedColor = p.colors?.[0] || null;
   let selectedSize = p.sizes?.[0] || null;
-
-  const colorBlock = document.getElementById("pdColorBlock");
-  if (p.colors?.length) {
-    colorBlock.style.display = "block";
-    document.getElementById("pdColorSwatches").innerHTML = p.colors
-      .map(
-        (c, i) =>
-          `<div class="opt-color ${i === 0 ? "active" : ""}" data-color="${c}" title="${c}" style="background:${COLOR_HEX[c] || "#ddd"}"></div>`
-      )
-      .join("");
-    document.getElementById("pdColorName").textContent = selectedColor;
-  } else {
-    colorBlock.style.display = "none";
-  }
 
   const sizeBlock = document.getElementById("pdSizeBlock");
   if (p.sizes?.length) {
@@ -225,13 +191,6 @@ function initProductPage() {
   }
 
   root.addEventListener("click", (e) => {
-    const colorEl = e.target.closest(".opt-color");
-    if (colorEl) {
-      selectedColor = colorEl.dataset.color;
-      document.querySelectorAll(".opt-color").forEach((el) => el.classList.remove("active"));
-      colorEl.classList.add("active");
-      document.getElementById("pdColorName").textContent = selectedColor;
-    }
     const sizeEl = e.target.closest(".opt-size");
     if (sizeEl) {
       selectedSize = sizeEl.dataset.size;
@@ -252,7 +211,7 @@ function initProductPage() {
   });
 
   document.getElementById("pdAddToCart").addEventListener("click", () => {
-    addToCart(p.id, qty, selectedColor, selectedSize);
+    addToCart(p.id, qty, null, selectedSize);
   });
 
   const wishBtn = document.getElementById("pdWish");

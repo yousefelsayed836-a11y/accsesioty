@@ -217,6 +217,8 @@ function initProductPage() {
   document.getElementById("pdMedia").innerHTML = mediaHTML(p);
   document.getElementById("pdMedia").classList.toggle("has-photo", !!p.img);
   document.getElementById("pdCat").textContent = categoryLabel(p.category);
+  const pdRating = document.getElementById("pdRating");
+  if (pdRating) pdRating.textContent = p.rating ? `★ ${p.rating}` : "";
   document.getElementById("pdTitle").textContent = p.name;
   document.getElementById("pdDesc").textContent = p.desc;
   document.getElementById("pdPriceNew").textContent = formatPrice(p.price);
@@ -341,6 +343,7 @@ function initCheckoutPage() {
   summaryEl.innerHTML = lines
     .map(
       (l) => `<div class="order-line">
+        <div class="order-line-media">${l.product.img ? `<img src="${l.product.img}" alt="">` : ""}</div>
         <span class="order-line-name">${l.product.name} × ${l.qty}</span>
         <span>${formatPrice(l.product.price * l.qty)}</span>
       </div>`

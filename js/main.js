@@ -1,5 +1,25 @@
 /* AUREVIA — shared site behavior: header, drawer, product rendering, page logic */
 
+/* ---------------- hero spotlight reveal ---------------- */
+function initHeroReveal() {
+  const media = document.querySelector(".hero-media");
+  if (!media) return;
+  const setPos = (clientX, clientY) => {
+    const rect = media.getBoundingClientRect();
+    const px = ((clientX - rect.left) / rect.width) * 100;
+    const py = ((clientY - rect.top) / rect.height) * 100;
+    media.style.setProperty("--mx", px + "%");
+    media.style.setProperty("--my", py + "%");
+  };
+  media.addEventListener("mousemove", (e) => {
+    setPos(e.clientX, e.clientY);
+    media.style.setProperty("--mr", "220px");
+  });
+  media.addEventListener("mouseleave", () => {
+    media.style.setProperty("--mr", "0px");
+  });
+}
+
 /* ---------------- header scroll + nav ---------------- */
 function initHeader() {
   const header = document.getElementById("siteHeader");
@@ -341,6 +361,7 @@ function initConfirmationPage() {
 /* ---------------- boot ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
+  initHeroReveal();
   initCartDrawer();
   initFooterYear();
   initNewsletter();

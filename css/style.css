@@ -261,16 +261,19 @@ body.has-hero .site-header:not(.is-solid) .icon-btn svg {
   width: 100%;
   overflow: hidden;
   background: #fff;
+  --mx: 50%;
+  --my: 50%;
+  --mr: 0px;
 }
 .hero-media img { width: 100%; height: auto; max-height: 64vh; object-fit: cover; object-position: center 82%; display: block; }
 .hero-media .hero-img-hover {
   position: absolute;
   inset: 0;
   height: 100%;
-  opacity: 0;
-  transition: opacity .5s ease;
+  -webkit-mask-image: radial-gradient(circle var(--mr) at var(--mx) var(--my), #000 65%, transparent 100%);
+  mask-image: radial-gradient(circle var(--mr) at var(--mx) var(--my), #000 65%, transparent 100%);
+  pointer-events: none;
 }
-.hero-media:hover .hero-img-hover { opacity: 1; }
 .hero-cta {
   position: absolute;
   left: 50%;

@@ -262,7 +262,7 @@ body.has-hero .site-header:not(.is-solid) .icon-btn svg {
   overflow: hidden;
   background: #fff;
 }
-.hero-media img { width: 100%; height: auto; max-height: 72vh; object-fit: cover; display: block; }
+.hero-media img { width: 100%; height: auto; max-height: 64vh; object-fit: cover; object-position: center 82%; display: block; }
 .hero-media .hero-img-hover {
   position: absolute;
   inset: 0;
@@ -291,7 +291,7 @@ body.has-hero .site-header:not(.is-solid) .icon-btn svg {
 }
 
 @media (max-width: 900px) {
-  .hero-media img { max-height: none; height: auto; object-fit: initial; }
+  .hero-media img { max-height: 48vh; }
   .hero-cta { left: 50%; bottom: 8%; }
 }
 

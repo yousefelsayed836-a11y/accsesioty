@@ -361,6 +361,15 @@ body.has-hero .logo-wordmark { transition: opacity .35s ease; }
   .hero-cta { left: 50%; bottom: 8%; }
   body.has-hero .site-header:not(.is-solid) .logo-wordmark { opacity: 0; }
   body.has-hero .site-header.is-solid .logo-wordmark { opacity: 1; }
+  .hero-media .hero-img-hover {
+    -webkit-mask-image: none;
+    mask-image: none;
+    opacity: 0;
+    transition: opacity .8s ease;
+  }
+  .hero-media.hero-scrolled .hero-img-hover {
+    opacity: 1;
+  }
 }
 
 /* ==========================================================================

@@ -13,22 +13,35 @@
 function initHeroReveal() {
   const media = document.querySelector(".hero-media");
   if (!media) return;
-  const setPos = (clientX, clientY) => {
+
+  const isMobile = () => window.innerWidth <= 900;
+
+  if (!isMobile()) {
+    const setPos = (clientX, clientY) => {
+      const rect = media.getBoundingClientRect();
+      const px = ((clientX - rect.left) / rect.width) * 100;
+      const py = ((clientY - rect.top) / rect.height) * 100;
+      media.style.setProperty("--mx", px + "%");
+      media.style.setProperty("--my", py + "%");
+    };
+    media.addEventListener("mousemove", (e) => {
+      if (isMobile()) return;
+      setPos(e.clientX, e.clientY);
+      media.style.setProperty("--mr", "220px");
+      media.style.setProperty("--mo", "1");
+    });
+    media.addEventListener("mouseleave", () => {
+      media.style.setProperty("--mr", "0px");
+      media.style.setProperty("--mo", "0");
+    });
+  }
+
+  window.addEventListener("scroll", () => {
+    if (!isMobile()) return;
     const rect = media.getBoundingClientRect();
-    const px = ((clientX - rect.left) / rect.width) * 100;
-    const py = ((clientY - rect.top) / rect.height) * 100;
-    media.style.setProperty("--mx", px + "%");
-    media.style.setProperty("--my", py + "%");
-  };
-  media.addEventListener("mousemove", (e) => {
-    setPos(e.clientX, e.clientY);
-    media.style.setProperty("--mr", "220px");
-    media.style.setProperty("--mo", "1");
-  });
-  media.addEventListener("mouseleave", () => {
-    media.style.setProperty("--mr", "0px");
-    media.style.setProperty("--mo", "0");
-  });
+    const progress = 1 - (rect.bottom / (rect.height + window.innerHeight));
+    media.classList.toggle("hero-scrolled", progress > 0.25);
+  }, { passive: true });
 }
 
 /* ---------------- testimonial slider ---------------- */
